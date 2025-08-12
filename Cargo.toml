@@ -1,6 +1,9 @@
-[package]
-name = "blog_open"
-version = "0.1.0"
-edition = "2024"
+[build]
+target = "thumbv7em-none-eabihf"
 
-[dependencies]
+
+[target.thumbv7em-none-eabihf]
+rustflags = [
+    "-C", "link-arg=-Tmemory.ld"
+]
+
